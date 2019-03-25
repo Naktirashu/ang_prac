@@ -1,0 +1,14 @@
+<label>User Name</label>
+<input type="text" 
+class="form-control"
+[(ngModel)]="userNameField">
+
+<button class="btn btn-primary"
+[disabled]="userNameField ===''"
+(click)="onSubmitUserName()">Set UserName</button>
+
+<button class="btn btn-primary"
+[disabled]="!currentUserName.length"
+(click)="onClearUserName()">Clear UserName</button>
+
+<p>{{ userNameStatus }}</p>
